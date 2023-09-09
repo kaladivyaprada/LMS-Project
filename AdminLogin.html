@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>HMS Library</title>
+        <link type="text/css" rel="stylesheet" href="page2.css">
+        <style>
+            body{
+                background:url("https://t3.ftcdn.net/jpg/03/48/55/20/360_F_348552050_uSbrANL65DNj21FbaCeswpM33mat1Wll.jpg");
+                background-repeat: no-repeat;
+                background-size:cover;
+            }
+            .book{
+                border:5px solid white;
+                margin:0 530px;
+                text-align: center;
+                margin-top: 130px;
+                background: url("https://res.allmacwallpaper.com/get/imac-wallpapers/abstract-simple-colors-8k/22255-720.jpg");
+                background-repeat: no-repeat;
+                background-size:cover;
+             }
+             form{
+                margin-top: 60px;
+                margin-bottom: 60px;
+             }
+             #aaa{
+                margin-right:90px;
+                font-size: 40px;
+                margin-bottom: 30px;
+             }
+              input[type=text],input[type=password]{
+                 font-size: 16px;
+             }
+             lable{
+                font-size: 20px;
+                color:yellow;
+             }
+             input[type=button]{
+                   font-size: 23px;
+                   margin-top: 20px;
+                   width: 140px;
+                   height: 35px;
+                   background-color: aqua;
+
+             }
+             input[type=button]:active{
+                   background-color: green;
+                   color:blue;    
+             }
+
+        </style>
+        <script>
+            function log(){
+                var name = document.ourform.name.value;
+                var password = document.ourform.password.value;
+
+                if(name==""){
+                    alert("Please Enter your Name");
+                
+                }
+                else if(password.length <6 || password.length >6){
+                      alert("Enter correct Password");
+                }
+                else{
+                    alert("Your login Successful");
+                }
+            }
+        </script>
+    </head>
+    <body id="tree">
+        <div class="head">
+            <nav>
+               <ul>
+                    <li id="head2">LIBRARY</li>
+                    <a href="http://127.0.0.1:5500/index.html"><li><u>Home</u></li></a>
+                    <a href="#"><li><u>Department</u></li></a>
+                    <a href="#"><li><u>About Us</u></li></a>
+                    <a href="#"><li><u>Faculty Reg</u></li></a>
+                    <a href="#"><li><u>Student Reg</u></li></a>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="book">
+            <form name="ourform" onSubmit="return validate()" method="post"  action="Adminhome.html">
+                <u style="color:yellow;"><h1 id="aaa">Login</h1></u>
+                <lable>User Name:</lable>
+                <input type="text" name="text"  placeholder="Enter your name" id="name">
+                <br>
+                <lable>Password:</lable>
+                <input type="password" name="pwd"  placeholder="Enter password" id="password">
+                <br><br>
+
+                <a href="http://127.0.0.1:5500/Adminhome.html"><input type="button" name="button" value="Login" onClick="log()" ></a>
+
+            </form>
+        </div>
+     
+
+    </body>
+</html>

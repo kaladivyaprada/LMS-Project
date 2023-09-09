@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>HMS Library</title>
+        <link type="text/css" rel="stylesheet" href="page2.css">
+        <script>
+            function login(){
+                var reg = document.myform.name.value;
+                var password = document.myform.password.value;
+
+                if(reg==""){
+                    alert("Please Enter your Regno");
+                
+                }
+                else if(password.length <6 || password.length >6){
+                      alert("Enter correct Password");
+                }
+                else{
+                    alert("Your login Successful");
+                }
+            }
+        </script>
+    </head>
+    <body id="plant">
+        <div class="head">
+            
+            <nav>
+               <ul>
+                    <li id="head2">LIBRARY</li>
+                    <a href="http://127.0.0.1:5500/index.html"><li><u>Home</u></li></a>
+                    <a href="http://127.0.0.1:5500/AdminLogin.html"><li><u>Admin</u></li></a>
+                    <a href="http://127.0.0.1:5500/register.html"><li><u>Department</u></li></a>
+                    <a href="http://127.0.0.1:5500/register.html"><li><u>About Us</u></li></a>
+                    <a href="http://127.0.0.1:5500/faculty.html"><li><u>Faculty Reg</u></li></a>
+                    <a href="http://127.0.0.1:5500/register.html"><li><u>Student Reg</u></li></a>
+                </ul>
+            </nav>
+        </div>
+        <b><p>HMS POLYTECHNIC<br> Welcome To Library</p></b>
+        
+     <div class="head3">
+        <form name="myform" method="post" action="library.html" onSubmit="return validate()" >
+            <u style="color: rgb(119, 239, 14);"><h1>LOG-IN</h1></u>
+            <lable id="add">Register no:</lable>
+            <div id="sub">
+            <input type="text" name="text1"  placeholder="Enter Your Regno" id="reg" size="20"><br>
+            </div>
+            <div id="div">
+            <lable id="mul">Password:</lable>
+            <input type="password" name="pwsd"  placeholder="Enter Your Password" id="password" size="20">
+            </div>
+        </form>
+     </div>
+
+     <a href="http://127.0.0.1:5500/library.html"><input type="button" value="Submit" onClick="login()"></a>
+        
+
+    </body>
+</html>
